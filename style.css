@@ -74,13 +74,16 @@ body {
     z-index: 1;
 }
 
-
 .Box1 {
     border-right: 1px solid #274546;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
     width: 100%;
+}
+
+.Box1-last {
+    border-right: 0;
 }
 
 .Box1div1 {
