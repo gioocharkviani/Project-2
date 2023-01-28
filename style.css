@@ -8,6 +8,12 @@ body {
     background: #EFEEE5;
 }
 
+@font-face {
+    font-family: FiraGo;
+  src: url(./FiraGO-Italic.woff);
+  }
+  
+
 
 .BoxWrapper {
     width: 100%;
@@ -18,16 +24,22 @@ body {
     position: absolute;
     width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     z-index: 10;
 }
 
 .Section1Wrapper {
+    padding: 0 0 30px 0;
     width: 80vw;
+    display: flex;
+    flex-direction: column;
     height: auto;
     border-right: 1px solid #274546;
     border-left: 1px solid #274546;
     min-height: 100vh; 
+    height: 100%;
+    justify-content: space-between;
 }
 
 
@@ -50,6 +62,8 @@ body {
     cursor: pointer;
 }
 
+
+
 .SinUp::before {
     width: 156px;
     height: 50px;
@@ -69,61 +83,381 @@ body {
 .sectionBc {
     width: 100%;
     min-height: 100vh;
+    height: 100%;
     display: grid;
     grid-template-columns: 30% 20%  20% 30%;
     z-index: 1;
 }
 
+
 .Box1 {
     border-right: 1px solid #274546;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+    position: relative;
     width: 100%;
+    min-height:100%;
+    display: flex;
+    flex-direction: column;
 }
+
+
+
 
 .Box1-last {
     border-right: 0;
 }
 
+.Gradient1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #F5F3EC, rgba(245, 243, 236, 0));
+}
+
+.Gradient1 img {
+    width: 100%;
+    height: auto;
+}
+
 .Box1div1 {
+    right: 0;
     top: 140px;
     position: relative;
-    width:75%;
     overflow: hidden;
+    width: 75%;
+    align-self: end;
 }
 
-.Box1div1 img {
-        width: 100%;
-        height: auto;
-        position: absolute;
-}
-
-.Box1div1 div {
-    display: block;
-    position: absolute;
-    background: linear-gradient(90deg, #F5F3EC, rgba(245, 243, 236, 0));
-  }
 
 
 
-.gradient1 {
-    overflow: hidden;
-    height: auto;
+
+.Boxinside {
+    position: relative;
+    display: flex;
+    flex-direction: row;
     width: 100%;
-    position: absolute;
-    background: linear-gradient(45deg, #F5F3EC 1.34%, rgba(245, 243, 236, 0) 95.85%);
+    justify-content: space-between;
+    top: 180px;
+    gap: 100px;
 }
+
 
 .Box1div2 {
+    position: relative;
     overflow: hidden;
     width: 50%;
 }
 
-
 .Box1div3 {
+    position: relative;
     overflow: hidden;
     width: 25%;
 }
 
+.Box1div4 {
+    position: relative;
+    overflow: hidden;
+}
+
+.Box1div5 {
+    top: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.Box1div6 {
+    top: 86px;
+    width: 35%;
+    position: relative;
+    overflow: hidden;
+    align-self: flex-end;
+}
+
+.Box1div7 {
+    top: 86px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    align-self: flex-end;
+}
+.Box1div8 {
+    top: 130px;
+    width: 35%;
+    position: relative;
+    overflow: hidden;
+    align-self: flex-end;
+}
+.Box1div9 {
+    top:180px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    align-self: flex-end;
+}
+
+.Box1div10 {
+    right: 0;
+    top: 140px;
+    position: relative;
+    overflow: hidden;
+    width: 75%;
+    align-self: end;
+}
+.Box1div11 {
+    right: 0;
+    top: 160px;
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    align-self: start;
+}
+.Box1div12 {
+    right: 0;
+    top: 190px;
+    position: relative;
+    overflow: hidden;
+    width: 20%;
+    align-self: end;
+}
+
+
 /* ------Section1 bacground ---------- */
+
+
+.Search-Div {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.header2 {
+    width: 50%;
+    padding: 46px 50px;
+    display: flex;
+    border-radius: 20px 20px 0px 0px;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.header2 h2 {
+    font-weight: 350;
+    color: #2D2A2A;
+    font-size: 30px;
+    font-family: FiraGo;
+}
+
+.header2 h2 b {
+    color: #274546;
+}
+
+.search-Form {
+    background-color: #fff;
+    width: 100%;
+    padding: 30px;
+    border-radius: 0px 0px 20px 20px;
+
+}
+
+.search-Form form {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.Search-input {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Search-input::before {
+    content: url(./images/search.svg);
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    display: flex;
+    justify-content: center;
+    z-index: 44;
+    position: absolute;
+    padding: 0 10px ;
+}
+
+.search-Form input {
+    position: relative;
+    width: 100%;
+    padding: 24px 10px 24px 44px;
+    background: #FCFBFA;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-family: FiraGo;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #2D2A2A;
+
+}
+.search-Form select {
+    width: 100%;
+    background: #FCFBFA;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-family: FiraGo;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #2D2A2A;
+
+}
+.search-Form button {
+    font-family: FiraGo;
+    width: 100%;
+    background: #274546;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.search-Form button:hover {
+    background: #316e70;
+}
+
+
+
+.Section2 {
+    padding: 92px 0;
+    border-right: 1px solid #274546;
+    border-left: 1px solid #274546;
+    width: 80vw;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.Section2 header h3 {
+    font-family: FiraGo;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    color: #274546;
+    padding: 0 10px;
+}
+
+
+.CardContainer {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(25%, 1fr));
+    width:100%;
+    margin-top: 50px;
+
+}
+
+.Card:hover {
+    transform: scale(1);
+    background:  #274546;
+    color: #ffff;
+}
+
+.Card:hover > .CardInfo span  {
+    color: #fff;
+}
+.Card:hover > .CardName h3 {
+    color: #fff;
+}
+
+.Card {
+    transition: 0.5s;
+    transform: scale(0.95);
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 120px 10px 50px 10px;
+    cursor: pointer;
+}
+
+.CardImg img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.CardInfo {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.CardInfo span {
+    font-family: FiraGo;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    font-size: 16px;
+    color: #2D2A2A;
+
+}
+
+.CardName {
+display: flex;
+}
+
+.CardName h3 {
+    font-family: FiraGo;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 36px;
+    color: #2D2A2A;
+}
+
+footer  {
+margin: 30px 0 0 0 ;
+width: 100%;
+display: flex;
+align-items: flex-end;
+flex-direction: column;
+justify-content: flex-end;
+}
+
+footer button {
+    font-family: FiraGo;
+    background: #274546;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #fff;
+    cursor: pointer;
+    padding: 15px 50px;
+}
+
+footer button:hover {
+    background: #316e70;
+}
+
+footer span {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #2D2A2A;
+    margin: 15px 0 0 0;
+
+}
